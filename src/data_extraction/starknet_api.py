@@ -1,4 +1,4 @@
-
+from src.config import STARKNET_NODE
 from starknet_py.net.gateway_client import GatewayClient
 from starknet_py.net.models import StarknetChainId
 from typing import Dict, List, Optional
@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 class StarknetDataExtractor:
     def __init__(self, node_url: str):
         """Initialize Starknet client."""
-        self.client = GatewayClient(node_url)
+        self.client = GatewayClient(STARKNET_NODE)
         self.chain_id = StarknetChainId.MAINNET
         self.logger = logger
 

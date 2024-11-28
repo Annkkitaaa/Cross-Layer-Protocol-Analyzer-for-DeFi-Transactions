@@ -6,17 +6,14 @@ import json
 import asyncio
 from datetime import datetime
 import logging
+from src.config import INFURA_URL
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 class EthereumDataExtractor:
-    def __init__(self, infura_url: str):
-        """Initialize Web3 connection with Infura."""
-        self.w3 = Web3(Web3.HTTPProvider(infura_url))
-        if not self.w3.is_connected():
-            raise ConnectionError("Failed to connect to Ethereum network")
-        self.logger = logger
+    def __init__(self):
+        self.w3 = Web3(Web3.HTTPProvider(INFURA_URL))
 
     async def get_transaction(self, tx_hash: str) -> Optional[Dict]:
         """Fetch transaction details by hash."""
