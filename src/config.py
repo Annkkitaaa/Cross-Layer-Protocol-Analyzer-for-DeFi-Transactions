@@ -1,2 +1,2 @@
-INFURA_URL = "your_actual_infura_url_here"  
-STARKNET_NODE = "https://starknet-mainnet.infura.io/v3/e6e6af1868134968b2e8ed3a7486f967"
+ALCHEMY_URL = "https://eth-mainnet.g.alchemy.com/v2/lGEaSKFc7b1YEq-TSsXkmqJo60ox534I"  
+STARKNET_NODE = "https://starknet-mainnet.g.alchemy.com/starknet/version/rpc/v0_7/lGEaSKFc7b1YEq-TSsXkmqJo60ox534I"

@@ -6,6 +6,12 @@ import plotly.express as px
 from datetime import datetime, timedelta
 import numpy as np
 from typing import Dict, List
+import sys
+import os
+
+# Add the root directory of the project to the Python path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+
 
 class DeFiAnalyzerDashboard:
     def __init__(self, eth_extractor, stark_extractor, anomaly_detector, defi_optimizer):
